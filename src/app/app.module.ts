@@ -9,6 +9,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { FAQComponent } from './faq/faq.component';
 import { FooterComponent } from './footer/footer.component';
 import { MaterialModule } from './material.module';
+import { CarsComponent } from './cars/cars.component';
+import { CarsDialogComponent } from './cars-dialog/cars-dialog.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,10 @@ import { MaterialModule } from './material.module';
     MenuComponent,
     HomePageComponent,
     FAQComponent,
-    FooterComponent
+    FooterComponent,
+    CarsComponent,
+    CarsDialogComponent
+
   ],
   imports: [
     BrowserModule,
@@ -25,6 +30,8 @@ import { MaterialModule } from './material.module';
     MaterialModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [CarsDialogComponent]
+
 })
 export class AppModule { }

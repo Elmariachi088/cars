@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./faq.component.scss']
 })
 export class FAQComponent {
+  panelOpenState = false;
 
 }

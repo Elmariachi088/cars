@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MaterialModule } from './material.module';
 import { CarsComponent } from './cars/cars.component';
 import { CarsDialogComponent } from './cars-dialog/cars-dialog.component';
+import { ItemComponent } from './item/item.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CarsDialogComponent } from './cars-dialog/cars-dialog.component';
     FAQComponent,
     FooterComponent,
     CarsComponent,
-    CarsDialogComponent
+    CarsDialogComponent,
+    ItemComponent
 
   ],
   imports: [

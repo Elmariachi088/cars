@@ -13,7 +13,7 @@ export class CarsDialogComponent {
     @Inject(MAT_DIALOG_DATA) public data: any,
   ) {
 
-    data.img_path = "../../assets/images/" + data.img_path;
+    data.img_path = "assets/images/" + data.img_path;
 
    }
 

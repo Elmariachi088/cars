@@ -9,3 +9,14 @@ export class FAQComponent {
   panelOpenState = false;
 
 }
+
+
+
+
+
+
+
+
+
+
+

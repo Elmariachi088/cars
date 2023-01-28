@@ -12,6 +12,14 @@ import { MaterialModule } from './material.module';
 import { CarsComponent } from './cars/cars.component';
 import { CarsDialogComponent } from './cars-dialog/cars-dialog.component';
 import { ItemComponent } from './item/item.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -22,14 +30,24 @@ import { ItemComponent } from './item/item.component';
     FooterComponent,
     CarsComponent,
     CarsDialogComponent,
-    ItemComponent
-
+    ItemComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    RouterModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })  
   ],
   providers: [],
   bootstrap: [AppComponent],

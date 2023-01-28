@@ -21,3 +21,16 @@ describe('FAQComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+

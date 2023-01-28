@@ -1,15 +1,14 @@
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" routerLink="#">Navbar w/ text</a>
+      <a class="navbar-brand" routerLink="#">S8 Auto Detailing</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a routerLinkActive="router-activelink" [routerLinkActiveOptions]="{exact:true}" class="nav-link"  routerLink="">Home</a>
-          </li>
-          <li class="nav-item">
+            <a routerLinkActive="router-activelink" [routerLinkActiveOptions]="{exact:true}" class="nav-link"  routerLink=""><span translate>HEADER.HOME</span></a>
+          </li>          <li class="nav-item">
             <a routerLinkActive="router-activelink" [routerLinkActiveOptions]="{exact:true}" class="nav-link" routerLink="faq">FAQ</a>
            
           </li>
@@ -18,6 +17,22 @@
             <a routerLinkActive="router-activelink" [routerLinkActiveOptions]="{exact:true}" class="nav-link" routerLink="cars">CARS</a>
            
           </li>
+          <li class="nav-item">
+            <a routerLinkActive="router-activelink" [routerLinkActiveOptions]="{exact:true}" class="nav-link" routerLink="form">FORM</a>
+           
+          </li>
+
+          <li>
+            <button mat-button [matMenuTriggerFor]="menu">{{lang().toUpperCase()}} <i class="material-icons">keyboard_arrow_down</i></button>
+            <mat-menu #menu="matMenu">
+            <button  *ngIf='lang().toLowerCase()=="az"||lang().toLowerCase()=="ru"' mat-menu-item  (click)="useLanguage('en')">EN</button>
+            <button  *ngIf='lang().toLowerCase()=="en"||lang().toLowerCase()=="ru"' mat-menu-item  (click)="useLanguage('az')">AZ</button>
+            <button  *ngIf='lang().toLowerCase()=="az"||lang().toLowerCase()=="en"' mat-menu-item  (click)="useLanguage('ru')">RU</button>
+          </mat-menu>
+          </li>
+
+
+          
 
           
           
